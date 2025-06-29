@@ -12,10 +12,26 @@ services:
       - key: N8N_BASIC_AUTH_USER
         value: with-worth admin
       - key: N8N_BASIC_AUTH_PASSWORD
-        value: *with-worth@admin#
+        value: "*with-worth@admin#"
       - key: N8N_HOST
         value: 0.0.0.0
       - key: N8N_PORT
         value: 5678
       - key: WEBHOOK_URL
         value: https://n8n-on-render.onrender.com
+
+      # ➕ Supabase PostgreSQL Connection
+      - key: DB_TYPE
+        value: postgresdb
+      - key: DB_POSTGRESDB_HOST
+        value: db.zqjlhrdisvaembbqgolz.supabase.co
+      - key: DB_POSTGRESDB_PORT
+        value: 5432
+      - key: DB_POSTGRESDB_DATABASE
+        value: postgres
+      - key: DB_POSTGRESDB_USER
+        value: postgres
+      - key: DB_POSTGRESDB_PASSWORD
+        sync: false
+      - key: DB_POSTGRESDB_SSL_REJECT_UNAUTHORIZED
+        value: "false"
